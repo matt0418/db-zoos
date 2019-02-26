@@ -56,8 +56,8 @@ router.put('/:id', async (req, res) => {
         .where({ id })
         if (updateInfo > 0) {
             const response = await db('zoos')
-            .where({id})
-            .first()
+                // .where({id})
+                // .first()
             res.status(200).json(response)
         } else {
             res.status(404).json({error: "ID bad dog"})
